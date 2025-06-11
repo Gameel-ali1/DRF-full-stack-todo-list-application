@@ -53,6 +53,7 @@ python manage.py runserver
 Frontend files are served from `index.html` from the `frontend/` folder in your browser.
 
 ### 6. Try it out
+Open index.html in your browser
 
 ## Project Structure
 

@@ -41,22 +41,18 @@ pip install -r requirements.txt
 
 ### 4. Apply database migrations
 ```bash
+python manage.py makemigrations
 python manage.py migrate
 ```
 
-### 5. (Optional) Create superuser for admin
-```bash
-python manage.py createsuperuser
-```
-
-### 6. Run the development server
+### 5. Run the development server
 ```bash
 python manage.py runserver
 ```
 
 Frontend files are served from `index.html` from the `frontend/` folder in your browser.
 
-### 7. Try it out
+### 6. Try it out
 
 ## Project Structure
 

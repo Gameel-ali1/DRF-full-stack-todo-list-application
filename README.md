@@ -58,18 +58,29 @@ Open index.html in your browser
 ## Project Structure
 
 ```
-.
-├── backend/
-│   ├── manage.py
-│   ├── todo/                # Django app
-│   │   ├── models.py        # Task model
-│   │   ├── serializers.py   # DRF serializers
-│   │   ├── views.py         # TaskViewSet
-│   │   └── urls.py          # /api/tasks/ routing
-│   └── project_name/
-├── frontend/                # HTML, JS using fetch/AJAX
-├── requirements.txt
-└── README.md
+taskapi/                    # Django project root
+├── taskapi/               # Django project settings
+│   ├── __init__.py
+│   ├── settings.py
+│   ├── urls.py
+│   └── wsgi.py
+├── tasks/                 # Django app
+│   ├── __init__.py
+│   ├── admin.py
+│   ├── apps.py
+│   ├── models.py
+│   ├── serializers.py
+│   ├── views.py
+│   ├── urls.py
+│   └── migrations/
+└── manage.py
+
+frontend/                  # Frontend files
+├── index.html
+├── styles/
+│   └── main.css
+└── scripts/
+    └── main.js
 ```
 
 ---

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Task Manager</h1>
+        </header>
+
+        <main>
+            <!-- Add Task Form -->
+            <section class="add-task-section">
+                <form id="task-form" class="task-form">
+                    <div class="form-group">
+                        <input 
+                            type="text" 
+                            id="task-title" 
+                            placeholder="Task title..." 
+                            required
+                        >
+                        <textarea 
+                            id="task-description" 
+                            placeholder="Task description (optional)..."
+                            rows="2"
+                        ></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Add Task</button>
+                </form>
+            </section>
+
+            <!-- Filter Buttons -->
+            <section class="filter-section">
+                <div class="filter-buttons">
+                    <button class="btn btn-filter active" data-filter="all">All</button>
+                    <button class="btn btn-filter" data-filter="pending">Pending</button>
+                    <button class="btn btn-filter" data-filter="completed">Completed</button>
+                </div>
+                <button id="clear-completed" class="btn btn-danger">Clear Completed</button>
+            </section>
+
+            <!-- Tasks List -->
+            <section class="tasks-section">
+                <div id="loading" class="loading hidden">Loading...</div>
+                <div id="error-message" class="error-message hidden"></div>
+                <ul id="tasks-list" class="tasks-list"></ul>
+                <div id="empty-state" class="empty-state hidden">
+                    <p>No tasks yet. Add one above!</p>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="scripts/main.js"></script>
+</body>
+</html>
